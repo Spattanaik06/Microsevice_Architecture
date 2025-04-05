@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Greet_Api
+
+  boot:
+    admin:
+      client:
+        url:
+        - http://localhost:8081
+
+server:
+  port: 9090
+
