@@ -1,0 +1,21 @@
+
+server:
+  port: 1010
+
+spring:
+  application:
+    name: Cloud_GateWay
+
+  cloud:
+    gateway:
+      mvc:
+        routes:
+        - id: Welcome-Api
+          uri: lb://Welcome-Api
+          predicates:
+          - Path=/welcome
+        - id: Greet-Api
+          uri: lb://Greet-Api
+          predicates:
+          - Path=/greet
+
